@@ -1,0 +1,57 @@
+CREATE TABLE Medidas (
+id INT AUTO_INCREMENT PRIMARY KEY,
+medida VARCHAR(50) NOT NULL
+);
+
+INSERT INTO Medidas (medida) VALUES
+('Mililitro'),
+('Litro'),
+('Gramo'),
+('Miligramo'),
+('Onza'),
+('Libra'),
+('Taza'),
+('Cucharada'),
+('Cucharadita'),
+('Rebanada'),
+('Pizca');
+
+CREATE TABLE Componente (
+id INT AUTO_INCREMENT PRIMARY KEY,
+componente VARCHAR(50) NOT NULL
+);
+
+INSERT INTO Componente (componente) VALUES
+('Principal'),
+('Guarnición'),
+('Salsa'),
+('Aderezo'),
+('Adorno');
+
+CREATE TABLE Recetas (
+id INT AUTO_INCREMENT PRIMARY KEY,
+nombre VARCHAR(255) NOT NULL,
+descripcion TEXT,
+tiempo INT,
+porciones INT
+);
+
+CREATE TABLE Ingredientes (
+id INT AUTO_INCREMENT PRIMARY KEY,
+receta_id INT,
+componente_id INT,
+cantidad DECIMAL(10, 2),
+medida_id INT,
+ingrediente VARCHAR(255),
+FOREIGN KEY (receta_id) REFERENCES Recetas(id),
+FOREIGN KEY (medida_id) REFERENCES Medidas(id),
+FOREIGN KEY (componente_id) REFERENCES Componente(id)
+);
+
+CREATE TABLE Pasos (
+id INT AUTO_INCREMENT PRIMARY KEY,
+receta_id INT,
+numero INT,
+descripcion TEXT,
+FOREIGN KEY (receta_id) REFERENCES Recetas(id)
+);

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Formulario</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		
+		<!-- STYLE CSS -->
+		<link rel="stylesheet" href="css/style.css">
+
+		
+	</head>
+
+	<body>
+
+		<nav class="nav" id="nav">
+			<div class="container">
+				
+			
+				<ul>
+					<li><a href="">Inicio</a></li>
+					<li><a href="">Crear</a></li>
+					<li><a href="">Mis Recetas</a></li>
+					<li><a href="">Cerrar Sesion</a></li>
+
+
+				</ul>
+			</div>
+		</nav>
+
+		<div id="parte1">
+			<div class="wrapper" >
+				<div class="inner" >
+					<form action="" class="form">
+						<div class="titulo">
+						<h3>Crea Tu Receta</h3>
+						<p>Llena el formulario con la informacion e imagen de la deliciosa receta.</p>
+					<br>	
+					</div>
+						<div class="form-wrapper">
+							<label for="">Nombre</label>
+							<input type="text" class="form-control">
+						</div>
+						<div class="form-wrapper">
+							<label for="">Descripción</label>
+							<input type="text" class="form-control">
+						</div>
+						
+					</form>
+					<button onclick="mostrarParte('parte2')">Siguiente</button>
+				</div>
+			</div>
+		</div>
+
+		<!--Segunda parte-->
+
+		<div id="parte2" style="display: none;">
+			<div class="wrapper">
+				<div class="inner">
+					<form action="" class="form">
+						<h3> Receta</h3>
+				
+						<div class="form-wrapper">
+							<label for="">Tiempo</label>
+							<input type="text" class="form-control">
+						</div>
+						<div class="form-wrapper">
+							<label for="">Porciones</label>
+							<input type="text" class="form-control">
+						</div>
+
+						
+					</form>
+					<div class="botonesf">
+					<button onclick="mostrarParte('parte1')">Volver</button>
+					<button onclick="mostrarParte('parte3')">Siguiente</button>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+
+
+
+
+
+
+
+
+		<div id="parte3" style="display: none;">
+			<div class="wrapper">
+				<div class="inner">
+					<form action="" class="form">
+						<h3>Crear </h3>
+					<!--	<div class="form-group">
+							<div class="form-wrapper">
+								<label for="">Nombre Receta</label>
+								<input type="text" class="form-control">
+							</div>
+							<div class="form-wrapper">
+								<label for="">Last Name</label>
+								<input type="text" class="form-control">
+							</div>
+						</div>-->
+						<div class="form-wrapper">
+							<label for="">Lo demas</label>
+							<input type="text" class="form-control">
+						</div>
+						<div class="form-wrapper">
+							<label for="">Demas</label>
+							<input type="text" class="form-control">
+						</div>
+
+						
+						
+					</form>
+					<div class="botonesf">
+					<button onclick="mostrarParte('parte2')">Volver</button>
+					<button onclick="mostrarParte('parte1')">Listo</button>	
+					</div>
+					
+				</div>
+			</div>
+		</div>
+
+
+
+		<script src="/js/form.js"></script>
+
+	</body>
+</html>
