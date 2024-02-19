@@ -16,17 +16,6 @@ INSERT INTO Medidas (medida) VALUES
 ('Rebanada'),
 ('Pizca');
 
-CREATE TABLE Componente (
-id INT AUTO_INCREMENT PRIMARY KEY,
-componente VARCHAR(50) NOT NULL
-);
-
-INSERT INTO Componente (componente) VALUES
-('Principal'),
-('Guarnición'),
-('Salsa'),
-('Aderezo'),
-('Adorno');
 
 CREATE TABLE Recetas (
 id INT AUTO_INCREMENT PRIMARY KEY,
@@ -39,13 +28,11 @@ porciones INT
 CREATE TABLE Ingredientes (
 id INT AUTO_INCREMENT PRIMARY KEY,
 receta_id INT,
-componente_id INT,
 cantidad DECIMAL(10, 2),
 medida_id INT,
 ingrediente VARCHAR(255),
 FOREIGN KEY (receta_id) REFERENCES Recetas(id),
-FOREIGN KEY (medida_id) REFERENCES Medidas(id),
-FOREIGN KEY (componente_id) REFERENCES Componente(id)
+FOREIGN KEY (medida_id) REFERENCES Medidas(id)
 );
 
 CREATE TABLE Pasos (
