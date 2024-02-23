@@ -1,2 +1,2 @@
 # recetario-cocina
-Proyecto FrontEnd - Solangie Quintana
+Proyecto FrontEnd - Solangie y Nicolas
