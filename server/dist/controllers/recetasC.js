@@ -12,8 +12,20 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.eliminarReceta = exports.actualizarReceta = exports.crearReceta = exports.obtenerRecetaPorId = exports.obtenerTodasLasRecetas = void 0;
+exports.eliminarReceta = exports.actualizarReceta = exports.obtenerRecetaPorId = exports.obtenerTodasLasRecetas = exports.crearReceta = void 0;
 const receta_1 = __importDefault(require("../models/receta"));
+const crearReceta = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
+    const { visual, nombre, descripcion, imagen_url, tiempo, porciones, usuarioId } = req.body;
+    try {
+        const nuevaReceta = yield receta_1.default.create({ visual, nombre, descripcion, imagen_url, tiempo, porciones, usuarioId });
+        res.status(201).json(nuevaReceta);
+    }
+    catch (error) {
+        console.error(error);
+        res.status(500).json({ message: 'Error al crear la receta' });
+    }
+});
+exports.crearReceta = crearReceta;
 const obtenerTodasLasRecetas = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     try {
         const recetas = yield receta_1.default.findAll();
@@ -40,18 +52,6 @@ const obtenerRecetaPorId = (req, res) => __awaiter(void 0, void 0, void 0, funct
     }
 });
 exports.obtenerRecetaPorId = obtenerRecetaPorId;
-const crearReceta = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
-    const { nombre, descripcion, tiempo, porciones } = req.body;
-    try {
-        const nuevaReceta = yield receta_1.default.create({ nombre, descripcion, tiempo, porciones });
-        res.status(201).json(nuevaReceta);
-    }
-    catch (err) {
-        console.error(err);
-        res.status(500).json({ message: 'Error al crear la receta' });
-    }
-});
-exports.crearReceta = crearReceta;
 const actualizarReceta = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     const { id } = req.params;
     const { nombre, descripcion, tiempo, porciones } = req.body;
