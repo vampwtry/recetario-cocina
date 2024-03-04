@@ -15,9 +15,9 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.crearIngrediente = void 0;
 const ingrediente_1 = __importDefault(require("../models/ingrediente"));
 const crearIngrediente = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
-    const { recetaId, cantidad, medidaId, nombre } = req.body;
+    const { receta_id, cantidad, medida_id, ingrediente } = req.body;
     try {
-        const nuevoIngrediente = yield ingrediente_1.default.create({ recetaId, cantidad, medidaId, nombre });
+        const nuevoIngrediente = yield ingrediente_1.default.create({ receta_id, cantidad, medida_id, ingrediente });
         res.status(201).json(nuevoIngrediente);
     }
     catch (error) {

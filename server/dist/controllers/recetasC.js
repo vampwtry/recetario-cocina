@@ -15,9 +15,9 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.eliminarReceta = exports.actualizarReceta = exports.obtenerRecetaPorId = exports.obtenerTodasLasRecetas = exports.crearReceta = void 0;
 const receta_1 = __importDefault(require("../models/receta"));
 const crearReceta = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
-    const { visual, nombre, descripcion, imagen_url, tiempo, porciones, usuarioId } = req.body;
+    const { visual, nombre, descripcion, imagen_url, tiempo, porciones, usuario_id } = req.body;
     try {
-        const nuevaReceta = yield receta_1.default.create({ visual, nombre, descripcion, imagen_url, tiempo, porciones, usuarioId });
+        const nuevaReceta = yield receta_1.default.create({ visual, nombre, descripcion, imagen_url, tiempo, porciones, usuario_id });
         res.status(201).json(nuevaReceta);
     }
     catch (error) {

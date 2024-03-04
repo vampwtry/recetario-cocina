@@ -10,7 +10,7 @@ const receta_1 = __importDefault(require("./receta"));
 class PasoPreparacion extends sequelize_1.Model {
 }
 PasoPreparacion.init({
-    recetaId: {
+    receta_id: {
         type: sequelize_1.DataTypes.INTEGER,
         allowNull: false,
         references: {

@@ -7,5 +7,5 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importDefault(require("express"));
 const ingredientesC_1 = require("../controllers/ingredientesC");
 const router = express_1.default.Router();
-router.post('/ingredientes', ingredientesC_1.crearIngrediente);
+router.post('/', ingredientesC_1.crearIngrediente);
 exports.default = router;

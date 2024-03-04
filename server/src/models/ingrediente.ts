@@ -6,22 +6,22 @@ import Receta from './receta';
 
 interface IngredienteAttributes {
   id?: number;
-  recetaId: number;
+  receta_id: number;
   cantidad: number;
-  medidaId: number;
-  nombre: string;
+  medida_id: number;
+  ingrediente: string;
 }
 
 class Ingrediente extends Model<IngredienteAttributes> implements IngredienteAttributes {
   public id!: number;
-  public recetaId!: number;
+  public receta_id!: number;
   public cantidad!: number;
-  public medidaId!: number;
-  public nombre!: string;
+  public medida_id!: number;
+  public ingrediente!: string;
 }
 
 Ingrediente.init({
-  recetaId: {
+  receta_id: {
     type: DataTypes.INTEGER,
     allowNull: false,
     references: {
@@ -33,7 +33,7 @@ Ingrediente.init({
     type: DataTypes.DECIMAL(10, 2),
     allowNull: false
   },
-  medidaId: {
+  medida_id: {
     type: DataTypes.INTEGER,
     allowNull: false,
     references: {
@@ -41,14 +41,14 @@ Ingrediente.init({
       key: 'id'
     }
   },
-  nombre: {
+  ingrediente: {
     type: DataTypes.STRING,
     allowNull: false
   }
 }, {
   sequelize,
-  tableName: 'ingredientes', // Nombre de la tabla en la base de datos
-    modelName: 'Ingrediente', // Nombre del modelo
+  tableName: 'ingredientes', // nombre de la tabla en la base de datos
+    modelName: 'Ingrediente', // nombre del modelo
     timestamps: false, // Desactivar los campos de marcas de tiempo
 });
 

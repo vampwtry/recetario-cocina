@@ -4,6 +4,6 @@ import { crearPasoPreparacion } from '../controllers/pasosC';
 
 const router = express.Router();
 
-router.post('/pasos-preparacion', crearPasoPreparacion);
+router.post('/', crearPasoPreparacion);
 
 export default router;

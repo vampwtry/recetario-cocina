@@ -7,5 +7,5 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importDefault(require("express"));
 const pasosC_1 = require("../controllers/pasosC");
 const router = express_1.default.Router();
-router.post('/pasos-preparacion', pasosC_1.crearPasoPreparacion);
+router.post('/', pasosC_1.crearPasoPreparacion);
 exports.default = router;

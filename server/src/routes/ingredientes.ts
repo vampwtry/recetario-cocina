@@ -4,6 +4,6 @@ import { crearIngrediente } from '../controllers/ingredientesC';
 
 const router = express.Router();
 
-router.post('/ingredientes', crearIngrediente);
+router.post('/', crearIngrediente);
 
 export default router;

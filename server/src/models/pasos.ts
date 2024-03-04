@@ -5,20 +5,20 @@ import Receta from './receta';
 
 interface PasoPreparacionAttributes {
   id?: number;
-  recetaId: number;
+  receta_id: number;
   numero: number;
   descripcion: string;
 }
 
 class PasoPreparacion extends Model<PasoPreparacionAttributes> implements PasoPreparacionAttributes {
   public id!: number;
-  public recetaId!: number;
+  public receta_id!: number;
   public numero!: number;
   public descripcion!: string;
 }
 
 PasoPreparacion.init({
-  recetaId: {
+  receta_id: {
     type: DataTypes.INTEGER,
     allowNull: false,
     references: {

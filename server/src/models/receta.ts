@@ -11,7 +11,7 @@ interface RecetaAttributes {
   imagen_url?: string;
   tiempo: string;
   porciones: string;
-  usuarioId: number;
+  usuario_id: number;
 }
 
 
@@ -23,7 +23,7 @@ class Receta extends Model<RecetaAttributes> implements RecetaAttributes {
   public imagen_url?: string;
   public tiempo!: string;
   public porciones!: string;
-  public usuarioId!: number;
+  public usuario_id!: number;
 }
 
 Receta.init({
@@ -57,7 +57,7 @@ Receta.init({
     type: DataTypes.STRING(20),
     allowNull: false
   },
-  usuarioId: {
+  usuario_id: {
     type: DataTypes.INTEGER,
     allowNull: false,
     references: {

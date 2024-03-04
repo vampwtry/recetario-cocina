@@ -17,12 +17,12 @@ app.use('/ingredientes', ingredientesRouter);
 app.use('/pasos-preparacion', pasosPreparacionRouter);
 
 app.listen(PORT, async () => {
-  console.log(`Server is running on port ${PORT}`);
+  console.log(`Servidor corriendo en el ${PORT}`);
   
   try {
     await sequelize.authenticate();
-    console.log('Database connection has been established successfully.');
+    console.log('Conexion a la base de datos exitosa.');
   } catch (error) {
-    console.error('Unable to connect to the database:', error);
+    console.error('Error al conectarse a la base de datos ', error);
   }
 });

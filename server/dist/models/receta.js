@@ -40,7 +40,7 @@ Receta.init({
         type: sequelize_1.DataTypes.STRING(20),
         allowNull: false
     },
-    usuarioId: {
+    usuario_id: {
         type: sequelize_1.DataTypes.INTEGER,
         allowNull: false,
         references: {

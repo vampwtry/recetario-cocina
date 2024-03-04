@@ -15,9 +15,9 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.crearPasoPreparacion = void 0;
 const pasos_1 = __importDefault(require("../models/pasos"));
 const crearPasoPreparacion = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
-    const { recetaId, numero, descripcion } = req.body;
+    const { receta_id, numero, descripcion } = req.body;
     try {
-        const nuevoPasoPreparacion = yield pasos_1.default.create({ recetaId, numero, descripcion });
+        const nuevoPasoPreparacion = yield pasos_1.default.create({ receta_id, numero, descripcion });
         res.status(201).json(nuevoPasoPreparacion);
     }
     catch (error) {

@@ -11,7 +11,7 @@ const receta_1 = __importDefault(require("./receta"));
 class Ingrediente extends sequelize_1.Model {
 }
 Ingrediente.init({
-    recetaId: {
+    receta_id: {
         type: sequelize_1.DataTypes.INTEGER,
         allowNull: false,
         references: {
@@ -23,7 +23,7 @@ Ingrediente.init({
         type: sequelize_1.DataTypes.DECIMAL(10, 2),
         allowNull: false
     },
-    medidaId: {
+    medida_id: {
         type: sequelize_1.DataTypes.INTEGER,
         allowNull: false,
         references: {
@@ -31,14 +31,14 @@ Ingrediente.init({
             key: 'id'
         }
     },
-    nombre: {
+    ingrediente: {
         type: sequelize_1.DataTypes.STRING,
         allowNull: false
     }
 }, {
     sequelize: connection_1.default,
-    tableName: 'ingredientes', // Nombre de la tabla en la base de datos
-    modelName: 'Ingrediente', // Nombre del modelo
+    tableName: 'ingredientes', // nombre de la tabla en la base de datos
+    modelName: 'Ingrediente', // nombre del modelo
     timestamps: false, // Desactivar los campos de marcas de tiempo
 });
 exports.default = Ingrediente;

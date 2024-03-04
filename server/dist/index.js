@@ -28,12 +28,12 @@ app.use('/recetas', recetas_1.default);
 app.use('/ingredientes', ingredientes_1.default);
 app.use('/pasos-preparacion', pasos_1.default);
 app.listen(PORT, () => __awaiter(void 0, void 0, void 0, function* () {
-    console.log(`Server is running on port ${PORT}`);
+    console.log(`Servidor corriendo en el ${PORT}`);
     try {
         yield connection_1.default.authenticate();
-        console.log('Database connection has been established successfully.');
+        console.log('Conexion a la base de datos exitosa.');
     }
     catch (error) {
-        console.error('Unable to connect to the database:', error);
+        console.error('Error al conectarse a la base de datos ', error);
     }
 }));
