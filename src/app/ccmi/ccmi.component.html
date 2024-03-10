@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link rel="stylesheet" href="../plantilla/Avances de front-end/public_html/assets/css/swiper-bundle.min.css">
+
+    <title>Divs con Imágenes y Iconos</title>
+
+</head>
+
+    <!-- Bootstrap + FoodHut main styles -->
+
+    <link rel="stylesheet" href="../plantilla/Avances de front-end/public_html/assets/css/listar.css">
+
+  
+
+<body data-spy="scroll" data-target=".navbar" data-offset="40" id="home" class="body1">
+    
+    <!-- Navbar -->
+    <nav>
+
+        <input type="checkbox" id="toogle">
+        <div class="logo">Logo</div>
+        <ul class="list">
+            <li><a href="/plantilla">inicio</a></li>
+            <li><a href="Crear.Receta.html">Crear Receta</a></li>
+            <li><a href="Receta.Individual.html">Mis recetas</a></li>
+            <li><a href="">Explorar</a></li>
+            <li><a href="">Cerrar Sesion</a></li>
+
+        </ul>
+    </nav>
+    <div class="container" ng-repeat="receta in recetas">
+        
+        <div class="div-search">
+            <h1 class="rec-title">Mis recetas</h1>
+            <input type="text" class="searchInput" id="searchInput" placeholder="Buscar alguna receta...">
+        </div>
+    
+        <hr>
+
+        <div class="slide-container swiper">
+            <div class="slide-content">
+                <div class="card-wrapper swiper-wrapper">
+                    <div class="card swiper-slide">
+                        <div class="image-content">
+                            <span class="overlay"></span>
+
+                            <div class="card-image">
+                                 <img src="assets/imgs/blog-2.jpg" alt="" class="card-img">
+                             </div>                     
+                        </div>
+
+                        <div class="card-content">
+                            <h2 class="name">Aperitivo de harinas con frutas</h2>
+                            <br>
+                            <p>30 a 60 min 5 personas</p>
+                            <br>
+                            <div class="icons">
+                                <a href="/Editar" class="edit-icon"><i class="fa-solid fa-pencil"></i></a>
+                                <a href="/RecetaIndividual" class="edit-icon"><i class="fa-sharp fa-solid fa-eye"></i></a>
+                                <a href="#" class="edit-icon"><i class="fa-solid fa-trash-can"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card swiper-slide">
+                        <div class="image-content">
+                            <span class="overlay"></span>
+
+                            <div class="card-image">
+                                 <img src="assets/imgs/blog-3.jpg" alt="" class="card-img">
+                             </div>                     
+                        </div>
+
+                        <div class="card-content">
+                            <h2 class="name">Hamburguesa de verduras con una carne</h2>
+                            <br>
+                            <p>40 a 60 min 2 personas</p>
+                            <br>
+                            <div class="icons">
+                                <a href="/Editar" class="edit-icon"><i class="fa-solid fa-pencil"></i></a>
+                                <a href="/RecetaIndividual" class="edit-icon"><i class="fa-sharp fa-solid fa-eye"></i></a>
+                                <a href="#" class="edit-icon"><i class="fa-solid fa-trash-can"></i></a>
+                            </div>
+                        </div>
+                    </div><div class="card swiper-slide">
+                        <div class="image-content">
+                            <span class="overlay"></span>
+
+                            <div class="card-image">
+                                 <img src="assets/imgs/blog-4.jpg" alt="" class="card-img">
+                             </div>                     
+                        </div>
+
+                        <div class="card-content">
+                            <h2 class="name">Aguardiente con sal y rodajas de limon</h2>
+                            <br>
+                            <p>10 a 15 min 1 personas</p>
+                            <br>
+                            <div class="icons">
+                                <a href="/Editar" class="edit-icon"><i class="fa-solid fa-pencil"></i></a>
+                                <a href="/RecetaIndividual" class="edit-icon"><i class="fa-sharp fa-solid fa-eye"></i></a>
+                                <a href="#" class="edit-icon"><i class="fa-solid fa-trash-can"></i></a>
+                            </div>
+                        </div>
+                    </div><div class="card swiper-slide">
+                        <div class="image-content">
+                            <span class="overlay"></span>
+
+                            <div class="card-image">
+                                 <img src="assets/imgs/blog-5.jpg" alt="" class="card-img">
+                             </div>                     
+                        </div>
+
+                        <div class="card-content">
+                            <h2 class="name">Batido de frutos rojos</h2>
+                            <br>
+                            <p>20 a 35 min 2 personas</p>
+                            <br>
+                            <div class="icons">
+                                <a href="/Editar" class="edit-icon"><i class="fa-solid fa-pencil"></i></a>
+                                <a href="/RecetaIndividual" class="edit-icon"><i class="fa-sharp fa-solid fa-eye"></i></a>
+                                <a href="#" class="edit-icon"><i class="fa-solid fa-trash-can"></i></a>
+                            </div>
+                        </div>
+                    </div><div class="card swiper-slide">
+                        <div class="image-content">
+                            <span class="overlay"></span>
+
+                            <div class="card-image">
+                                 <img src="assets/imgs/blog-6.jpg" alt="" class="card-img">
+                             </div>                     
+                        </div>
+
+                        <div class="card-content">
+                            <h2 class="name">Cocteles de naranja con hierba buena</h2>
+                            <br>
+                            <p>40 a 60 min 3 personas</p>
+                            <br>
+                            <div class="icons">
+                                <a href="/Editar" class="edit-icon"><i class="fa-solid fa-pencil"></i></a>
+                                <a href="/RecetaIndividual" class="edit-icon"><i class="fa-sharp fa-solid fa-eye"></i></a>
+                                <a href="#" class="edit-icon"><i class="fa-solid fa-trash-can"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card swiper-slide">
+                        <div class="image-content">
+                            <span class="overlay"></span>
+
+                            <div class="card-image">
+                                 <img src="assets/imgs/gallary-9.jpg" alt="" class="card-img">
+                             </div>                     
+                        </div>
+
+                        <div class="card-content">
+                            <h2 class="name">Wafles con fresas y arandanos</h2>
+                            <br>
+                            <p>30 a 50 min 3 personas</p>
+                            <br>
+                            <div class="icons">
+                                <a href="/Editar" class="edit-icon"><i class="fa-solid fa-pencil"></i></a>
+                                <a href="/RecetaIndividual" class="edit-icon"><i class="fa-sharp fa-solid fa-eye"></i></a>
+                                <a href="#" class="edit-icon"><i class="fa-solid fa-trash-can"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>  
+    
+    
+    <script src="../plantilla/Avances de front-end/public_html/assets/js/swiper-bundle.min.js"></script>
+<script src="../plantilla/Avances de front-end/public_html/assets/js/script.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        var allCards = document.querySelectorAll('.swiper-slide');
+
+        document.getElementById('searchInput').addEventListener('input', function() {
+            var searchValue = this.value.trim().toLowerCase();
+
+            allCards.forEach(function(card) {
+                var name = card.querySelector('.name').textContent.toLowerCase();
+                var cardWrapper = card.closest('.swiper-slide');
+                var regex = new RegExp(searchValue, 'i'); // 'i' flag for case insensitive search
+
+                if (regex.test(name) || searchValue === '') {
+                    cardWrapper.style.display = 'block';
+                } else {
+                    cardWrapper.style.display = 'none';
+                }
+            });
+        });
+    });
+</script>
+
+</body>
+
+
+</html>
