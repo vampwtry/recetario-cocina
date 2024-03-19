@@ -1,5 +1,5 @@
 import { Routes } from '@angular/router';
-import { PlantillaComponent } from './plantilla/plantilla.component';
+import { DashboardComponent } from './dashboard/dashboard/dashboard.component';}
 import { CrearRecetaComponent } from './crear-receta/crear-receta.component';
 import { AgregarTyPComponent } from './agregar-ty-p/agregar-ty-p.component';
 import { ComponentesComponent } from './componentes/componentes.component';
@@ -13,7 +13,7 @@ import { EditarPasosComponent } from './editar-pasos/editar-pasos.component';
 
 
 export const routes: Routes = [
-    {path: 'plantilla', component: PlantillaComponent },
+    {path: 'Dashboard', component: DashboardComponent },
     {path: 'CrearReceta', component: CrearRecetaComponent },
     {path: 'AgregarTyP', component: AgregarTyPComponent },
     {path: 'Componentes', component: ComponentesComponent },

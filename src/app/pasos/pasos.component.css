@@ -1,0 +1,95 @@
+table {
+    border-collapse: separate;
+    border-spacing: 5px;
+    border: none;
+    width: 100%;
+}
+th, td {
+    padding: 10px;
+    border: none;
+    outline: none;
+    text-align: center;
+}
+.left {
+    padding: 10px;
+    border: none;
+    outline: none;
+    text-align: left;
+    background-color: #f2f2f2;
+    border-bottom: 2px solid black;
+}
+.leftext {
+    padding: 10px;
+    border: none;
+    outline: none;
+    text-align: left;
+    width: 900px;
+}
+.input-border{
+    padding: 10px;
+    border: none;
+    outline: none;
+    text-align: left;
+    width: 900px;
+ 
+    font-family: Arial, sans-serif; /* Cambia el tipo de letra del input */
+    font-size: 16px; /* Ajusta el tamaño del texto */
+    padding: 5px; /* Añade un poco de espacio alrededor del texto */
+    background-color: #f2f2f2;
+}
+.thult {
+   padding: 10px;
+    border: none;
+    outline: none;
+    text-align: left;
+    background-color: white;
+    
+}
+
+th {
+    background-color: #f2f2f2;
+    border-bottom: 2px solid black;
+}
+tbody:before {
+    content: "";
+    display: block;
+}
+.borrar {
+    font-size: 20px;
+    color: black;
+    cursor: pointer;
+}
+.agregar {
+    font-size: 20px;
+    color: black;
+    cursor: pointer;
+}
+.button-container {
+display: flex;
+justify-content: left; 
+gap: 1px; 
+}
+
+.small-column {
+    padding: 1px;
+    border: none;
+    outline: none;
+    text-align: center;
+    width: 60px;
+    font-family: Arial, sans-serif; /* Cambia el tipo de letra del input */
+    font-size: 13px; /* Ajusta el tamaño del texto */
+    padding: 1px; /* Añade un poco de espacio alrededor del texto */
+    background-color: #f2f2f2;
+}
+
+@media (max-width: 900px) {
+/* Estilos específicos para pantallas pequeñas */
+.leftext,
+.input-border {
+    width: 100%; /* Otra vez, asegúrate de que se ajuste al 100% del ancho */
+    position: relative;
+}
+.button-container {
+    flex-direction: column; /* Cambiado de 'row' a 'column' para apilar los botones en pantallas pequeñas */
+}
+}
