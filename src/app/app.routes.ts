@@ -24,5 +24,5 @@ export const routes: Routes = [
     {path: 'EditarTyP', component: EditarTyPComponent },
     {path: 'EditarComponentes', component: EditarComponentesComponent },
     {path: 'EditarPasos', component: EditarPasosComponent },
-    {path: '', redirectTo: '/plantilla', pathMatch: 'full'}
+    
 ];
