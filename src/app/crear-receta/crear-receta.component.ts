@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
-import { Receta } from '../interfaces/receta';
+import { FormBuilder, FormGroup, ReactiveFormsModule} from '@angular/forms';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -10,28 +9,6 @@ import { CommonModule } from '@angular/common';
   templateUrl: './crear-receta.component.html',
   styleUrl: './crear-receta.component.css'
 })
-  export class CrearRecetaComponent implements OnInit{
-   form: FormGroup;
+  export class CrearRecetaComponent{
 
-    constructor(fb: FormBuilder){
-    this.form = fb.group({
-      Nombre: ["", Validators.required],
-     Descripcion: [""]
-    });
-    }
-    ngOnInit(): void {
-      throw new Error('Method not implemented.');
-    }
-    addReceta(){
-      console.log('Add Receta');
-
-      console.log(this.form);
-
-    const receta: Receta = {
-       Nombre: this.form.get('Nombre')?.value,
-       Descripcion: this.form.value.Descripcion
-     }
-
-    console.log(receta);
-    }
 }

@@ -14,8 +14,6 @@
 
     <!-- Bootstrap + FoodHut main styles -->
 
-    <link rel="stylesheet" href="../plantilla/Avances de front-end/public_html/assets/css/Crear.Receta.css">
-
 
 
 
@@ -60,24 +58,17 @@
         <div class="contact-wrapper">
             <div class="contact-form">
                 <h3>Llena el formulario con la información e imagen de la deliciosa receta.</h3>
-                <form [formGroup]="form" (ngSubmit)="addReceta()">
+                <form>
                     <p>
                         <label>Nombre</label>
-                        <input type="text" formControlName="Nombre" id="Nombre">
-                        <span *ngIf="form.get('Nombre')?.hasError('required')">
-                            El campo es <strong>Requerido</strong>
-                        </span>
+                        <input type="text" name="Nombre" id="Nombre">
                     </p>
                     <p>
                         <label>Descripción</label>
                         <textarea rows="3"></textarea>
-                        <span *ngIf="form.get('Nombre')?.hasError('required')">
-                            El campo es <strong>Requerido</strong>
-                        </span>
                     </p>
                     <p>
                         <u>Agrega la imagen de tu receta, te va a aparecer detrás</u>
-                        <button type="submit" class="btn btn-primary">Registrar</button>
                         <a href="/AgregarTyP"> Siguiente </a>
                     </p>
                 </form>
