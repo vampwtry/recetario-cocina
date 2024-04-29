@@ -1,18 +1,20 @@
 import { Routes } from '@angular/router';
-import { PlantillaComponent } from './plantilla/plantilla.component';
-import { CrearRecetaComponent } from './crear-receta/crear-receta.component';
-import { AgregarTyPComponent } from './agregar-ty-p/agregar-ty-p.component';
-import { ComponentesComponent } from './componentes/componentes.component';
-import { PasosComponent } from './pasos/pasos.component';
-import { CCMIComponent } from './ccmi/ccmi.component';
-import { RecetaIndividualComponent } from './receta.individual/receta.individual.component';
-import { EditarComponent } from './editar/editar.component';
-import { EditarTyPComponent } from './editar-ty-p/editar-ty-p.component';
-import { EditarComponentesComponent } from './editar-componentes/editar-componentes.component';
-import { EditarPasosComponent } from './editar-pasos/editar-pasos.component';
+import { RegistroUsuarioComponent } from './components/addusuario/addusuario.component';
+import { PlantillaComponent } from './components/plantilla/plantilla.component';
+import { CrearRecetaComponent } from './components/crear-receta/crear-receta.component';
+import { AgregarTyPComponent } from './components/agregar-ty-p/agregar-ty-p.component';
+import { ComponentesComponent } from './components/componentes/componentes.component';
+import { PasosComponent } from './components/pasos/pasos.component';
+import { CCMIComponent } from './components/ccmi/ccmi.component';
+import { RecetaIndividualComponent } from './components/receta.individual/receta.individual.component';
+import { EditarComponent } from './components/editar/editar.component';
+import { EditarTyPComponent } from './components/editar-ty-p/editar-ty-p.component';
+import { EditarComponentesComponent } from './components/editar-componentes/editar-componentes.component';
+import { EditarPasosComponent } from './components/editar-pasos/editar-pasos.component';
 
 
 export const routes: Routes = [
+    {path: 'Registrar', component: RegistroUsuarioComponent },
     {path: 'plantilla', component: PlantillaComponent },
     {path: 'CrearReceta', component: CrearRecetaComponent },
     {path: 'AgregarTyP', component: AgregarTyPComponent },

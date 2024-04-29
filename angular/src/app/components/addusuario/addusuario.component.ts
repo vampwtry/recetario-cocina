@@ -1,47 +1,60 @@
-import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
-import { HttpErrorResponse } from '@angular/common/http';
-import { CommonModule } from '@angular/common';
-import { usuario } from '../../interfaces/usuario';
-
+import { Component } from '@angular/core';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-addusuario',
-  standalone: true,
-  imports: [ReactiveFormsModule, CommonModule],
   templateUrl: './addusuario.component.html',
   styleUrls: ['./addusuario.component.css']
 })
-export class AddusuarioComponent implements OnInit {
+export class RegistroUsuarioComponent {
+  usuarioForm: FormGroup;
+  condicionesCumplidas: boolean[] = [false, false, false];
+  condiciones: string[] = [
+    'La contraseña debe tener al menos una mayúscula.',
+    'La contraseña debe tener al menos dos números no consecutivos.',
+    'La contraseña no debe tener más de 5 caracteres.'
+  ];
 
-  form: FormGroup;
-
-  constructor(fb: FormBuilder){
-    this.form = fb.group({
-      nombre: ["", Validators.required],
-      contraseña: ["", Validators.required],
-      
+  constructor(private fb: FormBuilder) {
+    this.usuarioForm = this.fb.group({
+      nombreUsuario: ['', Validators.required],
+      contrasena: [
+        '',
+        [
+          Validators.required,
+          Validators.pattern(/^(?=.*[A-Z])(?=(?:.*\d.*\d))(?!.*\d{3,}).{1,5}$/)
+        ]
+      ]
     });
   }
 
-  ngOnInit(): void {
-    throw new Error('Method not implemented.');
+  get nombreUsuario() { return this.usuarioForm.get('nombreUsuario'); }
+  get contrasena() { return this.usuarioForm.get('contrasena'); }
+
+  validarContrasena(): void {
+    const contrasena = this.contrasena!.value;
+    this.condicionesCumplidas[0] = /[A-Z]/.test(contrasena);
+    this.condicionesCumplidas[1] = /(?=.*\d.*\d)(?!\d{3,})/.test(contrasena);
+    this.condicionesCumplidas[2] = contrasena.length <= 5;
   }
 
-  addUser(){
-    console.log('Agregar usuario');
-
-    console.log(this.form);
-
-    const usuario: usuario ={
-      id:0,
-      nombre: this.form.value.nombre,
-      contrasena: this.form.get('contraseña')?.value,
-    
+  registrarUsuario(): void {
+    if (this.usuarioForm.valid && this.condicionesCumplidas.every(condicion => condicion)) {
+      alert('¡Bienvenido!');
     }
-
-   
-    console.log(usuario);
   }
-  
+
+  getErrorMessages(): string[] {
+    return Object.keys(this.usuarioForm.get('contrasena')!.errors || {})
+      .map(key => {
+        switch (key) {
+          case 'required':
+            return 'La contraseña es requerida';
+          case 'pattern':
+            return 'La contraseña debe tener al menos una mayúscula, dos números no consecutivos y no más de 5 caracteres';
+          default:
+            return '';
+        }
+      });
+  }
 }
