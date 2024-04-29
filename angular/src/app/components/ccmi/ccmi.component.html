@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+
+    <title>Divs con Imágenes y Iconos</title>
+
+</head>
+
+    <!-- Bootstrap + FoodHut main styles -->
+
+
+
+  
+
+<body data-spy="scroll" data-target=".navbar" data-offset="40" id="home" class="body1">
+    
+    <!-- Navbar -->
+    <nav>
+
+        <input type="checkbox" id="toogle">
+        <div class="logo">Logo</div>
+        <ul class="list">
+            <li><a href="/plantilla">inicio</a></li>
+            <li><a href="/CrearReceta">Crear Receta</a></li>
+            <li><a href="/RecetaIndividual">Mis recetas</a></li>
+            <li><a href="">Explorar</a></li>
+            <li><a href="">Cerrar Sesion</a></li>
+
+        </ul>
+    </nav>
+    <div class="container" ng-repeat="receta in recetas">
+        
+        <div class="div-search">
+            <h1 class="rec-title">Mis recetas</h1>
+            <input type="text" class="searchInput" id="searchInput" placeholder="Buscar alguna receta...">
+        </div>
+    
+        <hr>
+
+        <div class="slide-container swiper">
+            <div class="slide-content">
+                <div class="card-wrapper swiper-wrapper">
+                    <div class="card swiper-slide">
+                        <div class="image-content">
+                            <span class="overlay"></span>
+
+                            <div class="card-image">
+                                 <img src="https://1.bp.blogspot.com/-ZDGlBwZXkvA/WUqkgE3NfBI/AAAAAAAAC38/mB-fzp2zB10jb90FqD-QQmR1use1-sHmgCLcBGAs/s1600/gourmet-burger.j" alt="" class="card-img">
+                             </div>                     
+                        </div>
+
+                        <div class="card-content">
+                            <h2 class="name">Aperitivo de harinas con frutas</h2>
+                            <br>
+                            <p>30 a 60 min 5 personas</p>
+                            <br>
+                            <div class="icons">
+                                <a href="/Editar" class="edit-icon"><i class="fa-solid fa-pencil"></i></a>
+                                <a href="/RecetaIndividual" class="edit-icon"><i class="fa-sharp fa-solid fa-eye"></i></a>
+                                <a href="#" class="edit-icon"><i class="fa-solid fa-trash-can"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card swiper-slide">
+                        <div class="image-content">
+                            <span class="overlay"></span>
+
+                            <div class="card-image">
+                                 <img src="blog-3.jpg" alt="" class="card-img">
+                             </div>                     
+                        </div>
+
+                        <div class="card-content">
+                            <h2 class="name">Hamburguesa de verduras con una carne</h2>
+                            <br>
+                            <p>40 a 60 min 2 personas</p>
+                            <br>
+                            <div class="icons">
+                                <a href="/Editar" class="edit-icon"><i class="fa-solid fa-pencil"></i></a>
+                                <a href="/RecetaIndividual" class="edit-icon"><i class="fa-sharp fa-solid fa-eye"></i></a>
+                                <a href="#" class="edit-icon"><i class="fa-solid fa-trash-can"></i></a>
+                            </div>
+                        </div>
+                    </div><div class="card swiper-slide">
+                        <div class="image-content">
+                            <span class="overlay"></span>
+
+                            <div class="card-image">
+                                 <img src="blog-4.jpg" alt="" class="card-img">
+                             </div>                     
+                        </div>
+
+                        <div class="card-content">
+                            <h2 class="name">Aguardiente con sal y rodajas de limon</h2>
+                            <br>
+                            <p>10 a 15 min 1 personas</p>
+                            <br>
+                            <div class="icons">
+                                <a href="/Editar" class="edit-icon"><i class="fa-solid fa-pencil"></i></a>
+                                <a href="/RecetaIndividual" class="edit-icon"><i class="fa-sharp fa-solid fa-eye"></i></a>
+                                <a href="#" class="edit-icon"><i class="fa-solid fa-trash-can"></i></a>
+                            </div>
+                        </div>
+                    </div><div class="card swiper-slide">
+                        <div class="image-content">
+                            <span class="overlay"></span>
+
+                            <div class="card-image">
+                                 <img src="blog-5.jpg" alt="" class="card-img">
+                             </div>                     
+                        </div>
+
+                        <div class="card-content">
+                            <h2 class="name">Batido de frutos rojos</h2>
+                            <br>
+                            <p>20 a 35 min 2 personas</p>
+                            <br>
+                            <div class="icons">
+                                <a href="/Editar" class="edit-icon"><i class="fa-solid fa-pencil"></i></a>
+                                <a href="/RecetaIndividual" class="edit-icon"><i class="fa-sharp fa-solid fa-eye"></i></a>
+                                <a href="#" class="edit-icon"><i class="fa-solid fa-trash-can"></i></a>
+                            </div>
+                        </div>
+                    </div><div class="card swiper-slide">
+                        <div class="image-content">
+                            <span class="overlay"></span>
+
+                            <div class="card-image">
+                                 <img src="gallary-6.jpg" alt="" class="card-img">
+                             </div>                     
+                        </div>
+
+                        <div class="card-content">
+                            <h2 class="name">Cocteles de naranja con hierba buena</h2>
+                            <br>
+                            <p>40 a 60 min 3 personas</p>
+                            <br>
+                            <div class="icons">
+                                <a href="/Editar" class="edit-icon"><i class="fa-solid fa-pencil"></i></a>
+                                <a href="/RecetaIndividual" class="edit-icon"><i class="fa-sharp fa-solid fa-eye"></i></a>
+                                <a href="#" class="edit-icon"><i class="fa-solid fa-trash-can"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card swiper-slide">
+                        <div class="image-content">
+                            <span class="overlay"></span>
+
+                            <div class="card-image">
+                                 <img src="gallary-9.jpg" alt="" class="card-img">
+                             </div>                     
+                        </div>
+
+                        <div class="card-content">
+                            <h2 class="name">Wafles con fresas y arandanos</h2>
+                            <br>
+                            <p>30 a 50 min 3 personas</p>
+                            <br>
+                            <div class="icons">
+                                <a href="/Editar" class="edit-icon"><i class="fa-solid fa-pencil"></i></a>
+                                <a href="/RecetaIndividual" class="edit-icon"><i class="fa-sharp fa-solid fa-eye"></i></a>
+                                <a href="#" class="edit-icon"><i class="fa-solid fa-trash-can"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>  
+    
+    
+    <script src="swiper-bundle.min.js"></script>
+<script src="script.js"></script>
+
+
+</body>
+</html>

@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <title>Perfecta innovación</title>
+</head>
+
+<body>
+
+
+    <nav>
+
+        <input type="checkbox" id="toogle">
+        <div class="logo">Logo</div>
+        <ul class="list">
+            <li><a href="/plantilla">inicio</a></li>
+            <li><a href="/CrearReceta">Crear Receta</a></li>
+            <li><a href="/RecetaIndividual">Mis recetas</a></li>
+            <li><a href="">Explorar</a></li>
+            <li><a href="">Cerrar Sesion</a></li>
+
+        </ul>
+
+        <label for="toogle" class="icon-bars">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </label>
+
+
+    </nav>
+
+        <label for="toogle" class="icon-bars">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </label>
+
+
+
+
+
+  <div class="wrapper">
+      <form action="">
+          <h1>¡Perfecta Innovación!</h1>
+          <h3>Ahora los ingredientes con su cantidad y medida, ¡y no te olvides de elegir qué tipo de componente son! También puedes agregar y eliminar.</h3>
+          <div class="table-container">
+              <table>
+                  <thead>
+                      <tr>
+                         
+                          <th class="leftCantidad">Cantidad</th>
+                          <th class="leftMedida">Medida</th>
+                          <th class="leftIngrediente">Ingrediente</th>
+                          <th class="thult"></th>
+                          <th class="thultmore"></th>
+                      </tr>
+                  </thead>
+
+                  <tbody>
+                      <tr>
+                          
+                          <td>
+                              <input class="cantidadText" type="text" value="3">
+                          </td>
+                          <td class="leftext">
+                              <select id="opciones" name="opciones" class="input-border">
+                                  <option value="opcion1">Rebanada</option>
+                                  <option value="opcion2">Rebanada</option>
+                                  <option value="opcion3">Rebanada</option>
+                              </select>
+                          </td>
+                          <td class="leftext"><input class="input-ingrediente" type="text" value="Pan"></td>
+                          <td><i class="fas fa-trash-alt borrar"></i></td>
+                      </tr>
+
+                      <tr>
+                         
+                          <td>
+                              <input class="cantidadText" type="text" value="2">
+                          </td>
+                          <td class="leftext">
+                              <select id="opciones" name="opciones" class="input-border">
+                                  <option value="opcion1">Unidad</option>
+                                  <option value="opcion2">Unidad</option>
+                                  <option value="opcion3">Unidad</option>
+                              </select>
+                          </td>
+                          <td class="leftext"><input class="input-ingrediente" type="text" value="Aguacate"></td>
+                          <td><i class="fas fa-trash-alt borrar"></i></td>
+                      </tr>
+
+                      <tr>
+                          
+                          <td>
+                              <input class="cantidadText" type="text" value="2">
+                          </td>
+                          <td class="leftext">
+                              <select id="opciones" name="opciones" class="input-border">
+                                  <option value="opcion1">Unidad</option>
+                                  <option value="opcion2">Unidad</option>
+                                  <option value="opcion3">Unidad</option>
+                              </select>
+                          </td>
+                          <td class="leftext"><input class="input-ingrediente" type="text" value="Huevo"></td>
+                          <td><i class="fas fa-trash-alt borrar"></i></td>
+                          <td><i class="fas fa-plus agregar"></i></td>
+                      </tr>
+                  </tbody>
+              </table>
+          </div>
+
+          <div class="button-container">
+              <a href="/AgregarTyP">Volver</a>
+              <a href="/Pasos">Siguiente</a>
+          </div>
+      </form>
+  </div>
+
+  <style>
+      table {
+            border-collapse: separate;
+            border-spacing: 5px;
+            border: none;
+            width: 100%;
+        }
+        th, td {
+            padding: 10px;
+            border: none;
+            outline: none;
+            text-align: center;
+        }
+        .left {
+            padding: 10px;
+            border: none;
+            outline: none;
+            text-align: left;
+            background-color: #f2f2f2;
+            border-bottom: 2px solid black;
+        }
+        .leftComponente{
+            padding: 10px;
+            border: none;
+            width: 150px;
+            outline: none;
+            text-align: center;
+            background-color: #f2f2f2;
+            border-bottom: 2px solid black;
+        }
+        .leftMedida{
+            padding: 10px;
+            border: none;
+            width: 150px;
+            outline: none;
+            text-align: center;
+            background-color: #f2f2f2;
+            border-bottom: 2px solid black;
+        }
+        .leftCantidad {
+            padding: 10px;
+            width: 70px;
+            border: none;
+            outline: none;
+            text-align: center;
+            background-color: #f2f2f2;
+            border-bottom: 2px solid black;
+        }
+        .leftIngrediente {
+            padding: 10px;
+            width: 400px;
+            border: none;
+            outline: none;
+            text-align: left;
+            background-color: #f2f2f2;
+            border-bottom: 2px solid black;
+        }
+        .leftext {
+            padding: 10px;
+            border: none;
+            outline: none;
+            text-align: left;
+            width: 100px;
+        }
+        .input-border{
+            padding: 10px;
+            border: none;
+            outline: none;
+            text-align: center;
+            width: 150px;
+         
+            font-family: Arial, sans-serif; /* Cambia el tipo de letra del input */
+            font-size: 16px; /* Ajusta el tamaño del texto */
+            padding: 5px; /* Añade un poco de espacio alrededor del texto */
+            background-color: #f2f2f2;
+        }
+        .input-ingrediente{
+            padding: 10px;
+            border: none;
+            outline: none;
+            text-align: left;
+            width: 400px;
+         
+            font-family: Arial, sans-serif; /* Cambia el tipo de letra del input */
+            font-size: 16px; /* Ajusta el tamaño del texto */
+            padding: 5px; /* Añade un poco de espacio alrededor del texto */
+            background-color: #f2f2f2;
+        }
+        .cantidadText{
+            padding: 10px;
+            border: none;
+            outline: none;
+            text-align: center;
+            width: 50px;
+         
+            font-family: Arial, sans-serif; /* Cambia el tipo de letra del input */
+            font-size: 16px; /* Ajusta el tamaño del texto */
+            padding: 5px; /* Añade un poco de espacio alrededor del texto */
+            background-color: #f2f2f2;
+        }
+        .thult {
+           padding: 10px;
+            border: none;
+            outline: none;
+            text-align: center;
+            background-color: white;
+            border-bottom: 2px solid black;
+            
+        }
+        .thultmore {
+           padding: 10px;
+            border: none;
+            outline: none;
+            text-align: left;
+            background-color: white;
+           
+            
+        }
+        
+        th {
+            background-color: #f2f2f2;
+            border-bottom: 2px solid black;
+        }
+        tbody:before {
+            content: "";
+            display: block;
+        }
+        .borrar {
+            font-size: 20px;
+            color: black;
+            cursor: pointer;
+        }
+        .agregar {
+            font-size: 20px;
+            color: black;
+            cursor: pointer;
+            
+        }
+        .button-container {
+        display: flex;
+        justify-content: left; 
+        gap: 1px; 
+    }
+
+    @media only screen and (max-width: 768px) {
+            .leftComponente,
+            .leftMedida,
+            .leftCantidad,
+            .leftIngrediente,
+            .input-border,
+            .input-ingrediente,
+            .cantidadText {
+                width: 100%;
+                max-width: none;
+            }
+        }
+  </style>
+</body>
+
+</html>
