@@ -70,7 +70,7 @@
                             <span class="overlay"></span>
 
                             <div class="card-image">
-                                 <img src="assets/imgs/blog-3.jpg" alt="" class="card-img">
+                                 <img src="blog-3.jpg" alt="" class="card-img">
                              </div>                     
                         </div>
 
@@ -90,7 +90,7 @@
                             <span class="overlay"></span>
 
                             <div class="card-image">
-                                 <img src="assets/imgs/blog-4.jpg" alt="" class="card-img">
+                                 <img src="blog-4.jpg" alt="" class="card-img">
                              </div>                     
                         </div>
 
@@ -110,7 +110,7 @@
                             <span class="overlay"></span>
 
                             <div class="card-image">
-                                 <img src="assets/imgs/blog-5.jpg" alt="" class="card-img">
+                                 <img src="blog-5.jpg" alt="" class="card-img">
                              </div>                     
                         </div>
 
@@ -130,7 +130,7 @@
                             <span class="overlay"></span>
 
                             <div class="card-image">
-                                 <img src="assets/imgs/blog-6.jpg" alt="" class="card-img">
+                                 <img src="gallary-6.jpg" alt="" class="card-img">
                              </div>                     
                         </div>
 
@@ -151,7 +151,7 @@
                             <span class="overlay"></span>
 
                             <div class="card-image">
-                                 <img src="assets/imgs/gallary-9.jpg" alt="" class="card-img">
+                                 <img src="gallary-9.jpg" alt="" class="card-img">
                              </div>                     
                         </div>
 
@@ -178,31 +178,9 @@
     </div>  
     
     
-    <script src="../plantilla/Avances de front-end/public_html/assets/js/swiper-bundle.min.js"></script>
-<script src="../plantilla/Avances de front-end/public_html/assets/js/script.js"></script>
-<script>
-    document.addEventListener("DOMContentLoaded", function() {
-        var allCards = document.querySelectorAll('.swiper-slide');
+    <script src="swiper-bundle.min.js"></script>
+<script src="script.js"></script>
 
-        document.getElementById('searchInput').addEventListener('input', function() {
-            var searchValue = this.value.trim().toLowerCase();
-
-            allCards.forEach(function(card) {
-                var name = card.querySelector('.name').textContent.toLowerCase();
-                var cardWrapper = card.closest('.swiper-slide');
-                var regex = new RegExp(searchValue, 'i'); // 'i' flag for case insensitive search
-
-                if (regex.test(name) || searchValue === '') {
-                    cardWrapper.style.display = 'block';
-                } else {
-                    cardWrapper.style.display = 'none';
-                }
-            });
-        });
-    });
-</script>
 
 </body>
-
-
 </html>
