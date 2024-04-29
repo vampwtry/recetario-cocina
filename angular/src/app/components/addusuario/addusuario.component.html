@@ -11,14 +11,13 @@
     <input type="text" formControlName="nombreUsuario">
   
     <label>Contraseña:</label>
-    <input type="password" formControlName="contrasena" (input)="validarContrasena()">
-    <div *ngIf="contrasena.invalid && (contrasena.dirty || contrasena.touched)">
-      <div *ngFor="let errorMessage of getErrorMessages()" class="error-message">{{ errorMessage }}</div>
+    <input type="password" formControlName="contrasena">
+    <div *ngFor="let mensaje of getErrorMessages()">
+      <div class="error-message">{{ mensaje }}</div>
     </div>
   
-    <button type="submit" [disabled]="usuarioForm.invalid">Registrar</button>
-  </form>
-  
-      
+    <button type="submit" [disabled]="!usuarioForm.valid">Registrar</button>
+</form>
+     
 </body>
 </html>

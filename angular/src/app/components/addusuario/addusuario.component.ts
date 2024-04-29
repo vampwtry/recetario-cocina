@@ -8,21 +8,21 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 })
 export class RegistroUsuarioComponent {
   usuarioForm: FormGroup;
-  condicionesCumplidas: boolean[] = [false, false, false];
+  condicionesCumplidas: boolean[] = [false, false];
   condiciones: string[] = [
-    'La contraseña debe tener al menos una mayúscula.',
-    'La contraseña debe tener al menos dos números no consecutivos.',
-    'La contraseña no debe tener más de 5 caracteres.'
+    'El nombre de usuario debe ser un correo.',
+    'La contraseña debe tener mínimo 8 caracteres y máximo 50.'
   ];
 
   constructor(private fb: FormBuilder) {
     this.usuarioForm = this.fb.group({
-      nombreUsuario: ['', Validators.required],
+      nombreUsuario: ['', [Validators.required, Validators.email]],
       contrasena: [
         '',
         [
           Validators.required,
-          Validators.pattern(/^(?=.*[A-Z])(?=(?:.*\d.*\d))(?!.*\d{3,}).{1,5}$/)
+          Validators.minLength(8),
+          Validators.maxLength(50)
         ]
       ]
     });
@@ -31,15 +31,8 @@ export class RegistroUsuarioComponent {
   get nombreUsuario() { return this.usuarioForm.get('nombreUsuario'); }
   get contrasena() { return this.usuarioForm.get('contrasena'); }
 
-  validarContrasena(): void {
-    const contrasena = this.contrasena!.value;
-    this.condicionesCumplidas[0] = /[A-Z]/.test(contrasena);
-    this.condicionesCumplidas[1] = /(?=.*\d.*\d)(?!\d{3,})/.test(contrasena);
-    this.condicionesCumplidas[2] = contrasena.length <= 5;
-  }
-
   registrarUsuario(): void {
-    if (this.usuarioForm.valid && this.condicionesCumplidas.every(condicion => condicion)) {
+    if (this.usuarioForm.valid) {
       alert('¡Bienvenido!');
     }
   }
@@ -50,8 +43,10 @@ export class RegistroUsuarioComponent {
         switch (key) {
           case 'required':
             return 'La contraseña es requerida';
-          case 'pattern':
-            return 'La contraseña debe tener al menos una mayúscula, dos números no consecutivos y no más de 5 caracteres';
+          case 'minlength':
+            return 'La contraseña debe tener mínimo 8 caracteres';
+          case 'maxlength':
+            return 'La contraseña debe tener máximo 50 caracteres';
           default:
             return '';
         }
