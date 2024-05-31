@@ -8,13 +8,10 @@ import { usuarioService } from './services/user.service'; //  servicio de usuari
 
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
-import { RegistroUsuarioComponent } from './components/addusuario/addusuario.component';
-
 
 @NgModule({
   declarations: [
-    AppComponent,
-    RegistroUsuarioComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,

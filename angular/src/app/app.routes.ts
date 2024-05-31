@@ -1,5 +1,5 @@
 import { Routes } from '@angular/router';
-import { RegistroUsuarioComponent } from './components/addusuario/addusuario.component';
+//import { RegistroUsuarioComponent } from './components/addusuario/addusuario.component';
 import { PlantillaComponent } from './components/plantilla/plantilla.component';
 import { CrearRecetaComponent } from './components/crear-receta/crear-receta.component';
 import { AgregarTyPComponent } from './components/agregar-ty-p/agregar-ty-p.component';
@@ -14,7 +14,7 @@ import { EditarPasosComponent } from './components/editar-pasos/editar-pasos.com
 
 
 export const routes: Routes = [
-    {path: 'Registrar', component: RegistroUsuarioComponent },
+//    {path: 'Registrar', component: RegistroUsuarioComponent },
     {path: 'plantilla', component: PlantillaComponent },
     {path: 'CrearReceta', component: CrearRecetaComponent },
     {path: 'AgregarTyP', component: AgregarTyPComponent },

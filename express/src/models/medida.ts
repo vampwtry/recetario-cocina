@@ -1,4 +1,3 @@
-// src/models/Medida.ts
 import { DataTypes, Model } from 'sequelize';
 import sequelize from '../db/connection';
 
@@ -13,15 +12,20 @@ class Medida extends Model<MedidaAttributes> implements MedidaAttributes {
 }
 
 Medida.init({
+  id: {
+    type: DataTypes.INTEGER.UNSIGNED,
+    autoIncrement: true,
+    primaryKey: true,
+  },
   medida: {
-    type: DataTypes.STRING,
-    allowNull: false
-  }
+    type: DataTypes.STRING(50),
+    allowNull: false,
+  },
 }, {
   sequelize,
-  tableName: 'modelos', // Nombre de la tabla en la base de datos
-    modelName: 'Medida', // Nombre del modelo
-    timestamps: false, // Desactivar los campos de marcas de tiempo
+  tableName: 'medidas',
+  modelName: 'Medida',
+  timestamps: false,
 });
 
 export default Medida;

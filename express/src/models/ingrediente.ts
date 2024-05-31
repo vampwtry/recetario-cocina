@@ -1,8 +1,7 @@
-// src/models/Ingrediente.ts
 import { DataTypes, Model } from 'sequelize';
 import sequelize from '../db/connection';
-import Medida from './medida';
 import Receta from './receta';
+import Medida from './medida';
 
 interface IngredienteAttributes {
   id?: number;
@@ -21,35 +20,44 @@ class Ingrediente extends Model<IngredienteAttributes> implements IngredienteAtt
 }
 
 Ingrediente.init({
+  id: {
+    type: DataTypes.INTEGER.UNSIGNED,
+    autoIncrement: true,
+    primaryKey: true,
+  },
   receta_id: {
     type: DataTypes.INTEGER,
     allowNull: false,
     references: {
       model: Receta,
-      key: 'id'
-    }
+      key: 'id',
+    },
   },
   cantidad: {
     type: DataTypes.DECIMAL(10, 2),
-    allowNull: false
+    allowNull: false,
   },
   medida_id: {
     type: DataTypes.INTEGER,
     allowNull: false,
     references: {
       model: Medida,
-      key: 'id'
-    }
+      key: 'id',
+    },
   },
   ingrediente: {
-    type: DataTypes.STRING,
-    allowNull: false
-  }
+    type: DataTypes.STRING(255),
+    allowNull: false,
+  },
 }, {
   sequelize,
-  tableName: 'ingredientes', // nombre de la tabla en la base de datos
-    modelName: 'Ingrediente', // nombre del modelo
-    timestamps: false, // Desactivar los campos de marcas de tiempo
+  tableName: 'ingredientes',
+  modelName: 'Ingrediente',
+  timestamps: false,
 });
+
+Ingrediente.belongsTo(Receta, { foreignKey: 'receta_id' });
+Ingrediente.belongsTo(Medida, { foreignKey: 'medida_id' });
+Receta.hasMany(Ingrediente, { foreignKey: 'receta_id' });
 
 export default Ingrediente;

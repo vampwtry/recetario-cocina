@@ -1,6 +1,6 @@
 // src/controllers/PasoPreparacionController.ts
 import { Request, Response } from 'express';
-import  PasoPreparacion  from '../models/pasos';
+import  PasoPreparacion  from '../models/paso';
 
 export const crearPasoPreparacion = async (req: Request, res: Response) => {
   const { receta_id, numero, descripcion } = req.body;
