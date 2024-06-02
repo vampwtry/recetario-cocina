@@ -3,9 +3,9 @@ import Receta from '../models/receta';
 
 
 export const crearReceta = async (req: Request, res: Response) => {
-    const { visual, nombre, descripcion,imagen_url, tiempo, porciones, usuario_id } = req.body;
+    const { visual, nombre, descripcion, tiempo, porciones, usuario_id } = req.body;
     try {
-      const nuevaReceta = await Receta.create({ visual,nombre, descripcion, imagen_url, tiempo, porciones, usuario_id });
+      const nuevaReceta = await Receta.create({ visual,nombre, descripcion, tiempo, porciones, usuario_id });
       res.status(201).json(nuevaReceta);
     } catch (error) {
       console.error(error);

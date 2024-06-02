@@ -18,7 +18,6 @@ class Receta extends Model<RecetaAttributes> implements RecetaAttributes {
   public visual!: boolean;
   public nombre!: string;
   public descripcion?: string;
-  public imagen_url?: string;
   public tiempo!: string;
   public porciones!: string;
   public usuario_id!: number;
@@ -43,10 +42,7 @@ Receta.init({
     type: DataTypes.TEXT,
     allowNull: true,
   },
-  imagen_url: {
-    type: DataTypes.STRING(255),
-    allowNull: true,
-  },
+
   tiempo: {
     type: DataTypes.STRING(20),
     allowNull: false,

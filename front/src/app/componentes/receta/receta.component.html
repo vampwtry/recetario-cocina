@@ -1,0 +1,46 @@
+<div class="form-v3-content">
+
+  <form  (ngSubmit)="addReceta()" class="form-detail" action="#" method="post" id="myform">
+    <h2>Crear Receta</h2>
+    <p class="text">Llena este formulario con esa receta que lleno tu corazon.</p>
+    <div class="form-group">
+      <div class="form-row form-row-1">
+        <label for="nombre">Nombre</label>
+        <input formControlName="nombre" type="text" name="nombre" id="nombre" class="input-text" required>
+      </div>
+    </div>
+    <div class="form-row form-row-1">
+        <label for="descripción">Descripción</label>
+        <input formControlName="descripcion" type="text" name="descripción" id="descripción" class="input-text" required>
+    </div>
+    <div class="form-group">
+      <div class="form-row form-row-1">
+        <label for="tiempo">Tiempo</label>
+        <input formControlName="tiempo" type="text" name="tiempo" id="tiempo" class="input-text" required>
+      </div>
+      <div class="form-row form-row-1">
+        <label for="porciones">Porciones</label>
+        <input formControlName="porciones" type="text" name="porciones" id="porciones" class="input-text" required>
+      </div>
+    </div>
+
+
+  
+    <button type="submit" class="btn btn-primary" >Registrar</button>
+  </form>
+ 
+  <div class="form-right">
+    <div class="form-images-1">
+      <img src="./imeges/22.png" width="400px" height="580px"  alt="">
+    </div>
+    <div class="form-images-2">
+      <img src="./imeges/logo.png" style="background-color: #f0f8ffaf;" height="100px" alt="">
+    </div>
+  </div>
+  
+  </div>
+
+
+<!-- Jquery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>

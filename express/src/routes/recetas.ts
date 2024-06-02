@@ -8,10 +8,10 @@ import Paso  from '../models/paso';
 const router = Router();
 
 router.post('/crear', async (req, res) => {
-  const { visual, nombre, descripcion, imagen_url, tiempo, porciones, usuario_id, ingredientes, pasos } = req.body;
+  const { visual, nombre, descripcion, tiempo, porciones, usuario_id, ingredientes, pasos } = req.body;
 
   try {
-    const receta = await Receta.create({ visual, nombre, descripcion, imagen_url, tiempo, porciones, usuario_id });
+    const receta = await Receta.create({ visual, nombre, descripcion,  tiempo, porciones, usuario_id });
 
     if (ingredientes && ingredientes.length > 0) {
       for (const ing of ingredientes) {
